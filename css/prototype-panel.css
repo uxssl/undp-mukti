@@ -1,0 +1,86 @@
+/* prototype flow panel */
+.fp-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--n900);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: var(--el2);
+}
+.fp {
+  position: fixed;
+  left: 20px;
+  bottom: 76px;
+  z-index: 70;
+  width: 330px;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  background: #fff;
+  border-radius: var(--r-lg);
+  box-shadow: var(--el2);
+  padding: 16px;
+  display: none;
+}
+.fp.open {
+  display: block;
+  animation: pageIn 0.2s;
+}
+.fp h5 {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--n500);
+  margin: 12px 0 6px;
+}
+.fp a {
+  display: flex;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  line-height: 18px;
+}
+.fp a:hover {
+  background: var(--n50);
+}
+.fp a.on {
+  background: var(--p50);
+  color: var(--p600);
+}
+.fp a code {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--n500);
+  min-width: 46px;
+}
+.fp label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+.fp .fp-ctl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px 10px;
+}
+.fp .fp-ctl button {
+  font-size: 12px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--n200);
+}
+.fp .fp-ctl button:hover {
+  border-color: var(--p500);
+  color: var(--p600);
+}

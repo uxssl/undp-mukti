@@ -1,0 +1,218 @@
+/* buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: var(--r-md);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  transition:
+    background 0.15s,
+    box-shadow 0.2s,
+    transform 0.1s,
+    border-color 0.15s;
+  white-space: nowrap;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: var(--p500);
+  color: #fff;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 6px 14px -6px rgba(4, 104, 177, 0.55);
+}
+.btn-primary:hover {
+  background: var(--p600);
+}
+.btn-primary:disabled {
+  background: var(--n300);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.btn-outline {
+  border: 1.5px solid var(--p500);
+  color: var(--p600);
+  background: var(--n0);
+}
+.btn-outline:hover {
+  background: var(--p50);
+}
+.btn-ghost {
+  color: var(--p600);
+}
+.btn-ghost:hover {
+  background: var(--p50);
+}
+.btn-white {
+  background: #fff;
+  color: var(--p600);
+}
+.btn-white:hover {
+  background: var(--p50);
+}
+.btn-glass {
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.btn-sm {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+.btn-block {
+  width: 100%;
+}
+.link {
+  color: var(--p600);
+  font-weight: 500;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+/* cards & badges */
+.card {
+  background: var(--n0);
+  border-radius: var(--r-lg);
+  box-shadow: var(--el1);
+}
+.pad {
+  padding: 24px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.b-success {
+  background: var(--s50);
+  color: var(--s600);
+}
+.b-info {
+  background: var(--p50);
+  color: var(--p600);
+}
+.b-warn {
+  background: var(--w50);
+  color: var(--w600);
+}
+.b-error {
+  background: var(--e50);
+  color: var(--e600);
+}
+.note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  line-height: 20px;
+}
+.note svg {
+  flex: none;
+  margin-top: 1px;
+}
+.note-info {
+  background: var(--p50);
+  color: var(--p700);
+}
+.note-warn {
+  background: var(--w50);
+  color: var(--w600);
+}
+.note-neutral {
+  background: var(--n100);
+  color: var(--n700);
+}
+.note-ok {
+  background: var(--n100);
+  color: var(--n700);
+}
+.note-ok svg {
+  color: var(--s600);
+}
+.divider {
+  height: 1px;
+  background: var(--n200);
+  margin: 12px 0;
+}
+
+/* form */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.field label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--n700);
+}
+.input {
+  height: 48px;
+  border: 1.5px solid var(--n300);
+  border-radius: var(--r-md);
+  padding: 0 14px;
+  background: var(--n0);
+  font-size: 16px;
+  width: 100%;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.input:hover {
+  border-color: var(--n500);
+}
+.input:focus {
+  outline: none;
+  border-color: var(--p500);
+  box-shadow: 0 0 0 3px var(--p100);
+}
+textarea.input {
+  height: auto;
+  min-height: 88px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+.help {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--n500);
+}
+.errtxt {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--e600);
+  display: none;
+}
+.field.has-err .errtxt {
+  display: block;
+}
+.field.has-err .input {
+  border-color: var(--e600);
+}
