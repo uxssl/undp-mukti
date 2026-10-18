@@ -2,6 +2,8 @@
 const V = {};
 V.home = () => {
   const k = prod(1),
+    oil = prod(3),
+    basket = prod(8),
     rs = SELLERS.rahima;
   return `<div class="wrap page">
   <section class="hero">${STITCH()}
@@ -10,9 +12,9 @@ V.home = () => {
       <div class="hero-cta"><a class="btn btn-white" href="#/products">${t('hero_cta')} ${ic('arrow', 18)}</a><a class="btn btn-glass" href="#/seller">${t('be_seller')}</a></div>
       <div class="hero-trust"><span>${ic('check', 18)} ${t('hero_t1')}</span><span>${ic('check', 18)} ${t('hero_t2')}</span><span>${ic('check', 18)} ${t('hero_t3')}</span></div></div>
     <div class="collage" aria-hidden="true">
-      <figure class="c1"><img src="${k.img}" alt=""></figure><figure><img src="assets/p-oil.jpg" alt=""></figure><figure><img src="assets/p-basket.jpg" alt=""></figure>
+      <figure class="c1"><img src="${k.img}" alt=""></figure><figure><img src="${oil.img}" alt=""></figure><figure><img src="${basket.img}" alt=""></figure>
       <div class="float f1">${sAvatar('rahima')}<div><div class="t-cap muted">${t('featured_maker')}</div><b class="t-label">${tr(rs.name)}</b>${stars(rs.rating, rs.reviews, ' · ' + tr(rs.loc))}</div></div>
-      <div class="float f2"><div><div class="t-cap muted">${esc(tr(k.name))}</div><b class="price fs-18">${money(k.price)}</b></div></div>
+      <div class="float f2"><div><div class="t-cap muted">${esc(tr(oil.name))}</div><b class="price fs-18">${money(oil.price)}</b></div></div>
     </div></section>
   <section class="vp">${[
     ['hand', 'vp1'],
